@@ -9,17 +9,17 @@
   <meta name="description" content="Hexo搭建个人博客1、登录Github创建新仓库username.github.io 2、安装Hexo使用hexo前需要安装Node.js、Git 更改node.js国内镜像 1npm config set registry http:&#x2F;&#x2F;registry.npmmirror.com  解除镜像并恢复官方源 1npm config set registry https:&#x2F;&#x2F;registry.np">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo搭建blog">
-<meta property="og:url" content="http://example.com/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.md">
+<meta property="og:url" content="http://example.com/2022/10/23/hexo%E6%90%AD%E5%BB%BAblog/index.html">
 <meta property="og:site_name" content="保武的博客">
 <meta property="og:description" content="Hexo搭建个人博客1、登录Github创建新仓库username.github.io 2、安装Hexo使用hexo前需要安装Node.js、Git 更改node.js国内镜像 1npm config set registry http:&#x2F;&#x2F;registry.npmmirror.com  解除镜像并恢复官方源 1npm config set registry https:&#x2F;&#x2F;registry.np">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214010664.png">
-<meta property="og:image" content="http://example.com/hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214412339.png">
-<meta property="article:published_time" content="2022-10-23T12:58:19.000Z">
-<meta property="article:modified_time" content="2022-10-23T13:51:11.926Z">
+<meta property="og:image" content="http://example.com/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214010664.png">
+<meta property="og:image" content="http://example.com/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214412339.png">
+<meta property="article:published_time" content="2022-10-23T13:55:29.000Z">
+<meta property="article:modified_time" content="2022-10-23T13:58:03.886Z">
 <meta property="article:author" content="baowu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214010664.png">
+<meta name="twitter:image" content="http://example.com/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214010664.png">
   
     <link rel="alternate" href="/atom.xml" title="保武的博客" type="application/atom+xml">
   
@@ -78,8 +78,8 @@
       <div class="outer">
         <section id="main"><article id="post-hexo搭建blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.md" class="article-date">
-  <time class="dt-published" datetime="2022-10-23T12:58:19.000Z" itemprop="datePublished">2022-10-23</time>
+    <a href="/2022/10/23/hexo%E6%90%AD%E5%BB%BAblog/" class="article-date">
+  <time class="dt-published" datetime="2022-10-23T13:55:29.000Z" itemprop="datePublished">2022-10-23</time>
 </a>
     
   </div>
@@ -115,7 +115,7 @@
 <h2 id="3、连接Github与本地"><a href="#3、连接Github与本地" class="headerlink" title="3、连接Github与本地"></a>3、连接Github与本地</h2><p>生成秘钥</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Name&quot;</span><br><span class="line">git config --global user.email &quot;Email&quot;</span><br><span class="line">#windows用户目录下</span><br><span class="line">ssh-keygen -t rsa -C &quot;Email&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214010664.png" alt="image-20221023214010664"></p>
+<p><img src="/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214010664.png" alt="image-20221023215714182"></p>
 <p>拷贝秘钥至github-New SSH key</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#验证连通性，按提示回车</span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
@@ -124,17 +124,17 @@
 
 
 
-<p><img src="/hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214412339.png" alt="image-20221023214412339"></p>
+<p><img src="/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.assets/image-20221023214412339.png" alt="image-20221023215714182"></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#设置远程部署</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: main/master</span><br></pre></td></tr></table></figure>
 
 <p>部署远程</p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.md" data-id="cl9lesyke0000b0u4dbe58xid" data-title="hexo搭建blog" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/10/23/hexo%E6%90%AD%E5%BB%BAblog/" data-id="cl9lf0np9000004u43ij6faf7" data-title="hexo搭建blog" class="article-share-link">分享</a>
       
       
       
@@ -145,7 +145,7 @@
 <nav id="article-nav">
   
   
-    <a href="/2022-10-23-hello-world.md" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/10/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
@@ -185,11 +185,11 @@
       <ul>
         
           <li>
-            <a href="/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.md">hexo搭建blog</a>
+            <a href="/2022/10/23/hexo%E6%90%AD%E5%BB%BAblog/">hexo搭建blog</a>
           </li>
         
           <li>
-            <a href="/2022-10-23-hello-world.md">Hello World</a>
+            <a href="/2022/10/23/hello-world/">Hello World</a>
           </li>
         
       </ul>
