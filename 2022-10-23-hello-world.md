@@ -9,7 +9,7 @@
   <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/10/23/hello-world/index.html">
+<meta property="og:url" content="http://example.com/2022-10-23-hello-world.md">
 <meta property="og:site_name" content="保武的博客">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh_CN">
@@ -75,7 +75,7 @@
       <div class="outer">
         <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/10/23/hello-world/" class="article-date">
+    <a href="/2022-10-23-hello-world.md" class="article-date">
   <time class="dt-published" datetime="2022-10-23T12:28:19.211Z" itemprop="datePublished">2022-10-23</time>
 </a>
     
@@ -112,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/23/hello-world/" data-id="cl9lc2apf00005su4bzfhe5b9" data-title="Hello World" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022-10-23-hello-world.md" data-id="cl9lc2apf00005su4bzfhe5b9" data-title="Hello World" class="article-share-link">分享</a>
       
       
       
@@ -120,6 +120,20 @@
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.md" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          hexo搭建blog
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -153,7 +167,11 @@
       <ul>
         
           <li>
-            <a href="/2022/10/23/hello-world/">Hello World</a>
+            <a href="/2022-10-23-hexo%E6%90%AD%E5%BB%BAblog.md">hexo搭建blog</a>
+          </li>
+        
+          <li>
+            <a href="/2022-10-23-hello-world.md">Hello World</a>
           </li>
         
       </ul>
