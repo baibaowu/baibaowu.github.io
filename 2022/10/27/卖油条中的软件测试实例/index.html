@@ -16,16 +16,16 @@
   <meta name="author" content="baowu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="需求1234油条订单管理模块（Order）：油条分为油条、油饼和油坨三种类型。学生可以根据自己的需要预定。但刘大妈可能某天不卖某个品种，刘大妈需要根据预定的数量来生产油条。每个品种最多每天卖10000个，每个学生每天可以预定20个。学生可以预定当天和第二天的油条，但不能预定第三天的油条。  多个学生可以向油条订单管理预定今、明两天的油条种类以及数目。  油条种类接口123456public int">
+    <meta name="description" content="需求1234油条订单管理模块（Order）：油条分为油条、油饼和油坨三种类型。学生可以根据自己的需要预定。但刘大妈可能某天不卖某个品种，刘大妈需要根据预定的数量来生产油条。每个品种最多每天卖10000个，每个学生每天可以预定20个。学生可以预定当天和第二天的油条，但不能预定第三天的油条。  多个学生可以向油条订单管理预定今、明两天的油条种类以及数目。  层次结构      test.order">
 <meta property="og:type" content="article">
 <meta property="og:title" content="卖油条中的软件测试实例">
 <meta property="og:url" content="http://baibaowu.github.io/2022/10/27/%E5%8D%96%E6%B2%B9%E6%9D%A1%E4%B8%AD%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B/index.html">
 <meta property="og:site_name" content="保武的博客">
-<meta property="og:description" content="需求1234油条订单管理模块（Order）：油条分为油条、油饼和油坨三种类型。学生可以根据自己的需要预定。但刘大妈可能某天不卖某个品种，刘大妈需要根据预定的数量来生产油条。每个品种最多每天卖10000个，每个学生每天可以预定20个。学生可以预定当天和第二天的油条，但不能预定第三天的油条。  多个学生可以向油条订单管理预定今、明两天的油条种类以及数目。  油条种类接口123456public int">
+<meta property="og:description" content="需求1234油条订单管理模块（Order）：油条分为油条、油饼和油坨三种类型。学生可以根据自己的需要预定。但刘大妈可能某天不卖某个品种，刘大妈需要根据预定的数量来生产油条。每个品种最多每天卖10000个，每个学生每天可以预定20个。学生可以预定当天和第二天的油条，但不能预定第三天的油条。  多个学生可以向油条订单管理预定今、明两天的油条种类以及数目。  层次结构      test.order">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://baibaowu.github.io/2022/10/27/%E5%8D%96%E6%B2%B9%E6%9D%A1%E4%B8%AD%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B/image-20221027103806454.png">
 <meta property="article:published_time" content="2022-10-27T00:53:00.000Z">
-<meta property="article:modified_time" content="2022-10-29T15:57:32.350Z">
+<meta property="article:modified_time" content="2022-10-31T06:33:51.097Z">
 <meta property="article:author" content="baowu">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.7k 字
+          4.8k 字
         
       </span>
     
@@ -299,6 +299,25 @@
 
 <p>多个学生可以向油条订单管理预定今、明两天的油条种类以及数目。</p>
 <p><img src="/2022/10/27/%E5%8D%96%E6%B2%B9%E6%9D%A1%E4%B8%AD%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B/image-20221027103806454.png" srcset="/img/loading.gif" lazyload alt="image-20221027103806454"></p>
+<p>层次结构</p>
+<ul>
+    <li>test.order</li>
+    <ul>
+        <li>model</li>
+            <ul>
+                <li>Youbing</li>
+                <li>Youtiao</li>
+                <li>YoutiaoType</li>
+                <li>Youtuo</li>
+            </ul>
+        <li>Order</li>
+        <li>OrderTest</li>
+        <li>Student</li>
+    </ul>
+</ul>
+
+
+
 <h1 id="油条种类接口"><a href="#油条种类接口" class="headerlink" title="油条种类接口"></a>油条种类接口</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">YoutiaoType</span> &#123;<br><br>    String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">boolean</span> <span class="hljs-title function_">reserve</span><span class="hljs-params">(<span class="hljs-type">int</span> num,<span class="hljs-type">int</span> days)</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h1 id="油条类型"><a href="#油条类型" class="headerlink" title="油条类型"></a>油条类型</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Youtiao</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">YoutiaoType</span>&#123;<br><br>    <span class="hljs-comment">//预定限额</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> todayCapacity=<span class="hljs-number">10000</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> tomorrowCapacity=<span class="hljs-number">10000</span>;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getTodayCapacity</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> todayCapacity;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getTomorrowCapacity</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> tomorrowCapacity;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;油条&quot;</span>;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">reserve</span><span class="hljs-params">(<span class="hljs-type">int</span> num, <span class="hljs-type">int</span> days)</span> &#123;<br>        <span class="hljs-type">boolean</span> flag=<span class="hljs-literal">false</span>;<br>        <span class="hljs-comment">//今天预定数量</span><br>        <span class="hljs-keyword">if</span>(days==<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-keyword">if</span>(todayCapacity-num&gt;=<span class="hljs-number">0</span>)&#123;<br>                todayCapacity-=num;<br>                flag=<span class="hljs-literal">true</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">//明天预定数量</span><br>        <span class="hljs-keyword">if</span>(days==<span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">if</span>(tomorrowCapacity-num&gt;=<span class="hljs-number">0</span>)&#123;<br>                tomorrowCapacity-=num;<br>                flag=<span class="hljs-literal">true</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> flag;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
